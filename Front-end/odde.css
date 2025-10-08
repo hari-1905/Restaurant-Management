@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.sidebar{
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color:gray;
+    color: white;
+}
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menus a, .sidebar-logout a{
+    padding: 5% 8%;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-menus a:hover, .sidebar-logout a:hover{
+    background-color: beige;
+    color: black;
+    border-radius: 50px;
+}
+.main{
+    width: 100%;
+    height: max-content;
+    padding: 2%;
+    min-height: 100vh;
+    background-color: rgb(244, 231, 231);
+    margin-left: 300px;
+}
+.main-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-toggle{
+    display: none;
+
+}
+.search{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+.search input{
+    width: 85%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+.search-btn{
+    background-color: rgb(43, 141, 174);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+.search:hover{
+    box-shadow: rgba(1, 10, 20, 0.2) 0px, 8px, 24px;
+}
+.search-btn:hover{
+    background-color: silver;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding:0 10px ;
+}
+
+.crt, .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 20px;
+    color: gray;
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+.main-highlight{
+    margin: 3%;
+    padding: 2%;
+    background-color: rgb(240, 245, 250);
+    border-radius: 8px;
+}
+.main-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-arrow{
+    font-size: 24px;
+}
+.back , .next{
+    cursor: pointer;
+}
+.back:hover, .next:hover{
+    color: rgb(111, 110, 110);
+}
+.highlight-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    border-radius: 8px;
+    gap: 1.5rem;
+    overflow-x: hidden;
+}
+.highlight-card{
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    width: 80%;
+    height: 100%;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: chocolate;
+    cursor: pointer;
+}
+.highlight-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+.highlight-desc h4{
+    font-size: 16px;
+}
+.highlight-card:hover{
+    background-color: rgb(241, 166, 113);
+    box-shadow: rgba(176, 176,176,0.2)  ;
+}
+.main-menus{
+    /* min-width: 100%; */
+    background-color: chocolate;
+    padding: 2%;
+    /* border-radius: 8px; */
+}
+.main-filter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+.back-menus, .next-menus{
+    cursor: pointer;
+}
+.back-menus:hover , .next-menus:hover{
+    color:wheat;
+}
+.filter-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    gap: 1.2rem;
+}
+.filter-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 50px;
+    background-color: chocolate;
+    color: beige;
+    border-radius: 8px;
+    border: 1px greenyellow;
+    font-size: 14px;
+    cursor: pointer;
+}
+.filter-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: blanchedalmond;
+    color: grey;
+    border-radius: 8px;
+    
+}
+.filter-card:hover{
+    /* background-color: rgb(57, 53, 53); */
+    color: white;
+}
+.filter-card:hover.filter-icon{
+    background-color: rgb(143, 139, 139);
+}
+.divider{
+    margin: 1rem;
+    height: 1px;
+    width: 100%;
+    background-color: whitesmoke    ;
+    border: none;
+}
+.main-detail{
+    margin: 1rem 0 1.5rem 0;
+}
+.detail-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+}
+
+.detail-card{
+    min-height: 2
+    80px;
+    height: 100%;
+    background-color: bisque;
+    border-radius: 8px;
+    margin: 1% 0;
+    cursor: pointer;
+}
+.detail-img{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+.detail-desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3%;
+    width: 100%;
+
+}
+.detail-sub{
+    font-size: 12px;
+    color:darkcyan;
+    letter-spacing: 0.5;
+    margin: 1% 0;
+}
+.price{
+    color: rgb(74, 68, 68);
+}
+.detail-favorite{
+    font-size: 24px;
+}
+.detail-card:hover{
+    box-shadow: rgba(176, 176,176,0.2);
+}
+.detail-card:hover .detail-img{
+    filter:opacity(2);
+}
+.detail-card:hover .detail-name h4{
+    color: darkred;
+}
+.detail-card:hover .price{
+    letter-spacing: 1.5;
+}
+
+@media  screen and (max-width:640px){
+    .sidebar{
+        display: none;
+    }
+    .main{
+        margin-left: 0;
+    }
+
+    .menu-toggle{
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: wheat;
+        color: gray;
+        justify-self: center;
+        align-items: center;
+        padding: 1 10px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+    }
+
+    .sidebar.active{
+        display: flex;
+        z-index: 10;
+    }
+    
+}
